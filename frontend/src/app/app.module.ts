@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ArticlesPageComponent } from './articles-page/articles-page.component';
+import { ProjectListComponent } from './project-list/project-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ArticlesPageComponent } from './articles-page/articles-page.component';
     TimelineComponent,
     ProjectsPageComponent,
     HomePageComponent,
-    ArticlesPageComponent
+    ArticlesPageComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+{
+    "data":[
+        {
+            "title": "Business Searching App",
+            "description": "CSCI571: Web Technology, iOS App, SwiftUI, Yelp Api",
+            "img": "assets/images/ios-app-img.png",
+            "link": "https://youtu.be/-aP97Hs5PU0",
+            "buttonDescription": "See demo video"
+        },
+        {
+            "title": "Business Searching Web",
+            "description": "CSCI571: Web Technology, Angular, Node.js, GCP, Bootstrap",
+            "img": "assets/images/business-search-web.png",
+            "link": "https://hw8csci571haotangli.uw.r.appspot.com/search",
+            "buttonDescription": "Checkout website"
+        },
+        {
+            "title": "Business Searching Web",
+            "description": "CSCI571: Web Technology, Flask, Python, HTML, CSS, JavaScript",
+            "img": "assets/images/business-search-web-flask.png",
+            "link": "https://csci-haotangli-hw6.uw.r.appspot.com/",
+            "buttonDescription": "Checkout website"
+        }
+    
+    ]
+}
