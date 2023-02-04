@@ -29,6 +29,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
       {path: 'home', component: HomePageComponent},
       {path: 'projects', component: ProjectsPageComponent},
       {path: 'articles', component: ArticlesPageComponent},
+      {path: '**', component: HomePageComponent},
       {path: '', redirectTo: '/home', pathMatch: 'full'},
     ]),
   ],
