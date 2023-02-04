@@ -20,6 +20,14 @@
             "img": "assets/images/business-search-web-flask.png",
             "link": "https://csci-haotangli-hw6.uw.r.appspot.com/",
             "buttonDescription": "Checkout website"
+        },
+        {
+            "title": "Neural Network From Scratch",
+            "description": "Implemented a multi-layer perceptron neural network and used it to classify data from different data sets including spiral, xor, circle and gaussian. Resulted in 90%+ accuracy."
+        },
+        {
+            "title": "AI Agent Playing Go",
+            "description": "Developed an AI Agent leveraging mini-max algorithm to play Go using Python; got 100% winning rate with random, greedy and aggressive players."
         }
     
     ]
