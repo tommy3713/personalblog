@@ -1,0 +1,14 @@
+<div class="container mt-3 pb-5">
+    <div class="col-sm-10 mx-auto">
+    <div *ngFor="let article of articles" class="row no-gutters position-relative border rounded mb-2 d-flex justify-content-center">
+        <div class="col-sm-4 mb-sm-0  p-sm-4 pt-4 text-center">
+          <img class="w-100 rounded" [src]=article.img alt="image">
+        </div>
+        <div class="col-sm-6 position-static p-4 pl-md-0 d-flex flex-column justify-content-center">
+          <h5 class="mt-0">{{article.title}}</h5>
+          <p>{{article.description}}</p>
+          <a [href]=article.link class="stretched-link" target="_blank">Go Medium to see the original post</a>
+        </div>
+      </div>
+    </div>
+</div>
