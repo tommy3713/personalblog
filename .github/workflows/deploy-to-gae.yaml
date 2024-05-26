@@ -16,6 +16,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    
+     - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
 
     - name: Authenticate GCP
       uses: google-github-actions/auth@v2
@@ -25,7 +30,7 @@ jobs:
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
-        version: '>= 363.0.0'
+        version: 'latest'
     - name: 'Use gcloud CLI'
       run: 'gcloud info'
 
