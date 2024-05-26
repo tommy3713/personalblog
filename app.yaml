@@ -1,6 +1,6 @@
 runtime: nodejs18
 service: default
-
+service-account: github-actions-deployer@blog-angular-376623.iam.gserviceaccount.com
 
 handlers:
 
