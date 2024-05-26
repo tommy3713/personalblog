@@ -5,6 +5,9 @@ on:
     branches:
       - main  # Set this to the branch from which you want to deploy
       - UAT
+      - feat/add-cicd-workflow
+runs:
+  using: 'node20'
 
 jobs:
   deploy:
