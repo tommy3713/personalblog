@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Set this to the branch from which you want to deploy
-      - UAT
+
 
 jobs:
   deploy:
@@ -13,24 +13,37 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Authenticate GCP
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
 
     - name: Set up Cloud SDK
-      uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@v2
       with:
-        project_id: ${{ secrets.GCP_PROJECT }}
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
-        export_default_credentials: true
+        version: 'latest'
+    - name: 'Use gcloud CLI'
+      run: 'gcloud info'
 
     - name: Install Dependencies
       run: |
         npm install
+      working-directory: ./frontend
 
     - name: Build
       run: |
         npm run build  # or any other build command you use
+      working-directory: ./frontend
 
     - name: Deploy to Google App Engine
       run: |
         gcloud app deploy --quiet
+      working-directory: ./
 
