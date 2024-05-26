@@ -18,7 +18,7 @@ jobs:
       run: pwd  # Executes 'pwd' to print the current directory
 
     - name: List Directory Contents
-      run: ls -la  # Executes 'ls -la' to list all files in the current directory in long format
+      run: cd && ls -la  # Executes 'ls -la' to list all files in the current directory in long format
       working-directory: ./
     - name: Checkout code
       uses: actions/checkout@v4
