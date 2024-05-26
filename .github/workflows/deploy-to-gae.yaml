@@ -19,6 +19,7 @@ jobs:
 
     - name: List Directory Contents
       run: ls -la  # Executes 'ls -la' to list all files in the current directory in long format
+      working-directory: ./
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -43,4 +44,5 @@ jobs:
     - name: Deploy to Google App Engine
       run: |
         gcloud app deploy --verbosity=debug
+      working-directory: ./
 
