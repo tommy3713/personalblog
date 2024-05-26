@@ -14,6 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Print Working Directory
+      run: pwd  # Executes 'pwd' to print the current directory
+
+    - name: List Directory Contents
+      run: ls -la  # Executes 'ls -la' to list all files in the current directory in long format
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -37,7 +42,5 @@ jobs:
 
     - name: Deploy to Google App Engine
       run: |
-        pwd |
-        ls |
         gcloud app deploy --verbosity=debug
 
