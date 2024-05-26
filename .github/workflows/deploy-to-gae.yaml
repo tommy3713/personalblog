@@ -37,5 +37,7 @@ jobs:
 
     - name: Deploy to Google App Engine
       run: |
+        pwd |
+        ls |
         gcloud app deploy --verbosity=debug
 
